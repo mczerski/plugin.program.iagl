@@ -977,9 +977,9 @@ def get_game_listitem(dict_in,filter_in,media_type='video'):
 	if all(include):
 		li = xbmcgui.ListItem(label=dict_in.get('values').get('label'),label2=dict_in.get('values').get('label2'),offscreen=True)
 		#script.module.infotagger v20
-		info_tag = ListItemInfoTag(li,media_type)
-		info_tag.set_info(dict_in.get('info'))
-		# li.setInfo(media_type,dict_in.get('info'))
+		#info_tag = ListItemInfoTag(li,media_type)
+		#info_tag.set_info(dict_in.get('info'))
+		li.setInfo(media_type,dict_in.get('info'))
 		li.setArt(dict_in.get('art'))
 		li.setProperties(dict_in.get('properties'))
 	return li
